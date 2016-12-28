@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <title>Afrikal</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav class="white">
+            <div class="nav-wrapper container">
+                <a href="/" class="brand-logo left">
+                    <i class="left ion ion-arrow-shrink"></i> Afrikal
+                </a>
+                <ul class="right">
+                    <li><a href="#" class="" id="openSearch"><i class="right ion ion-ios-search"></i></a></li>
+                    <li><a href="#" class="hide-on-small-only waves-effect">Help &amp; Support</a></li>
+                    <li><a href="/accounts/signin/" class="waves-effect">Login</a></li>
+                    <li><a href="/accounts/signup/" class="btn waves-effect waves-light brown darken-4 hide-on-small-only">Get job done</a></li>
+                    <li><a href="/accounts/signup/" class="btn waves-effect waves-light purple hide-on-small-only">Make money</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hide" id="searchField">
+            <div class="header">
+                <!--<p class="flow-text white-text left">Search</p>-->
+                <a href="#" class="btn-floating btn-large waves-effect waves-light transparent right" id="searchClose">
+                    <i class="icon ion-close-round"></i>
+                </a>
+            </div>
+            <div class="inner">
+
+                <form id="searchBox" onsubmit="alert('search not yet available'); return false;">
+                    <input type="search" id="searcharea" placeholder="Search services" autofocus autocomplete="false">
+                </form>
+            </div>
+            <div class="row">
+                <ul class="collection col l12">
+                    <li class="collection-item avatar">
+                        <img src="{% static 'images/yuna.jpg' %}" alt="" class="circle">
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle">folder</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle green">insert_chart</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle red">play_arrow</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section id="banner" class="center-align">
+        <div class="overlay white-text">
+            <h3>Get anything done or Make Money</h3>
+            <h5 class="slogan">
+                Get premium services at affordable prices
+            </h5>
+            <p class="flow-text">Search. Pick. Done. </p>
+            <button class="btn-large teal waves-effect waves-light" id="findServices">Find Services</button>
+        </div>
+    </section>
+
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+    <script src="{% static 'js/materialize.min.js'%}"></script>
+    <script src="{% static 'js/app.js'%}"></script>
+</body>
+
+</html>
