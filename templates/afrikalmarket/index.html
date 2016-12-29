@@ -10,20 +10,21 @@
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
 <body>
+
+    <!--CONTENT-->
     <div class="navbar-fixed">
         <nav class="white">
             <div class="nav-wrapper container">
-                <a href="/" class="brand-logo left">
+                <a href="{% url 'index' %}" class="brand-logo left">
                     <i class="left ion ion-arrow-shrink"></i> Afrikal
                 </a>
                 <ul class="right">
                     <li><a href="#" class="" id="openSearch"><i class="right ion ion-ios-search"></i></a></li>
                     <li><a href="#" class="hide-on-small-only waves-effect">Help &amp; Support</a></li>
-                    <li><a href="/accounts/signin/" class="waves-effect">Login</a></li>
-                    <li><a href="/accounts/signup/" class="btn waves-effect waves-light brown darken-4 hide-on-small-only">Get job done</a></li>
-                    <li><a href="/accounts/signup/" class="btn waves-effect waves-light purple hide-on-small-only">Make money</a></li>
+                    <li><a href="{% url 'userena_signin' %}" class="waves-effect">Login</a></li>
+                    <li><a href="{% url 'userena_signup' %}" class="btn waves-effect waves-light brown darken-4 hide-on-small-only">Get job done</a></li>
+                    <li><a href="{% url 'userena_signup_sellers' %}" class="btn waves-effect waves-light purple hide-on-small-only">Make money</a></li>
                 </ul>
             </div>
         </nav>
@@ -74,6 +75,67 @@
             </div>
         </div>
     </div>
+    {% comment %}<div class="navbar-fixed">
+        <nav class="white">
+            <div class="nav-wrapper container">
+                <a href="index.html" class="brand-logo left">
+                    <i class="left ion ion-arrow-shrink"></i> Afrikal
+                </a>
+                <ul class="right">
+                    <li><a href="#" class="" id="openSearch"><i class="right ion ion-ios-search"></i></a></li>
+                    <li><a href="#" class="hide-on-small-only waves-effect">Help &amp; Support</a></li>
+                    <li><a href="#" class="waves-effect">Login</a></li>
+                    <li><a href="#" class="btn waves-effect waves-light brown darken-4 hide-on-small-only">Get job done</a></li>
+                    <li><a href="#" class="btn waves-effect waves-light purple hide-on-small-only">Make money</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hide animated" id="searchField">
+            <div class="header">
+                <!--<p class="flow-text white-text left">Search</p>-->
+                <a href="#" class="btn-floating btn-large waves-effect waves-light transparent right" id="searchClose">
+                    <i class="icon ion-close-round"></i>
+                </a>
+            </div>
+            <div class="inner">
+                <form id="searchBox" onsubmit="alert('search not yet available'); return false;">
+                    <input type="search" id="searcharea" placeholder="Search services" autofocus autocomplete="false">
+                </form>
+            </div>
+            <div class="row">
+                <ul class="collection col l12">
+                    <li class="collection-item avatar">
+                        <img src="images/yuna.jpg" alt="" class="circle">
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle">folder</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle green">insert_chart</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                    <li class="collection-item avatar">
+                        <i class="material-icons circle red">play_arrow</i>
+                        <span class="title">Title</span>
+                        <p>First Line <br> Second Line
+                        </p>
+                        <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>{% endcomment %}
     <section id="banner" class="center-align">
         <div class="overlay white-text">
             <h3>Get anything done or Make Money</h3>
@@ -84,11 +146,112 @@
             <button class="btn-large teal waves-effect waves-light" id="findServices">Find Services</button>
         </div>
     </section>
+    <section id="categories" class="row grey lighten-5">
+        <div class="container">
+            <header>
+                <h4 class="center">
+                    POPULAR CATEGORIES
+                    <br>
+                    <small>Choose from our most popular services</small>
+                </h4>
+            </header>
+            <section id="categories_on_home">
+                <div class="row">
+                    <div class="col s12 m6 l8">
+                        <!--<p class="flow-text category_head white-text text-darken-2 green darken-3 center">
+                            <i class="icon ion-ios-lightbulb"></i> ONLINE SERVICES</p>-->
+                        <div class="row">
+                            <div class="col s12 m12 l6">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Web Design </a>
+                                        <br>
+                                        <small>Get  your bussiness online with a website </small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/img5.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Graphic Design </a>
+                                        <br>
+                                        <small>Everything graphics, from Design to Picture editing </small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/img1.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Graphic Design </a>
+                                        <br>
+                                        <small> Creation, Design and editing of graphics </small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/header0.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Content Writing </a>
+                                        <br>
+                                        <small> Articles, stories and web contents</small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/writing.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m6 l4">
+                        <!--<p class="flow-text category_head brown darken-4 white-text center">
+                            <i class="icon ion-ios-lightbulb"></i> OFFLINE SERVICES</p>-->
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Photography </a>
+                                        <br>
+                                        <small> Perfect memories for weddings and other events</small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/photography.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l12">
+                                <div class="card">
+                                    <div class="card-action">
+                                        <a href="#"> Graphic Design </a>
+                                        <br>
+                                        <small>Everything graphics, from Design to Picture editing </small>
+                                    </div>
+                                    <div class="card-image">
+                                        <img src="{% static 'images/img1.jpg' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!--END CONTENT-->
 
 
+    <!--SCRIPT-->
     <script src="{% static 'js/jquery.min.js'%}"></script>
     <script src="{% static 'js/materialize.min.js'%}"></script>
     <script src="{% static 'js/app.js'%}"></script>
+    <!--SCRIPTS END-->
 </body>
-
 </html>

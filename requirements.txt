@@ -1,3 +1,4 @@
+guardian
 beautifulsoup4==4.5.1
 cssmin==0.2.0
 dj-database-url==0.4.1

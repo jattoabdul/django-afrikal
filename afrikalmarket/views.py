@@ -4,9 +4,6 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, "afrikalmarket/index.html")
+    context_dict = locals()
+    return render(request, "afrikalmarket/index.html", context_dict)
 
-
-# @login_required()
-# def dashboard(request):
-#     return render(request, "afrikalmarket/dashboard.html")

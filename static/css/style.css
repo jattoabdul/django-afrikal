@@ -91,3 +91,71 @@ div.overlay {
 .collection .collection-item {
     background-color: rgba(255, 255, 255, 0);
 }
+
+section#categories .container {
+    padding: 1.5rem 0 0;
+    width: 95%;
+}
+
+section#categories header h4 {
+    font-weight: 600;
+    font-family: 'roboto';
+    font-size: 1.8rem;
+}
+
+#categories header h4 small {
+    font-size: 60%;
+    font-weight: 500;
+    border-bottom: 2px solid saddlebrown;
+}
+
+#categories_on_home .row .card h5 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'lato';
+}
+
+#categories_on_home .row .card h5 small {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#categories_on_home .row .card {
+    padding: 0px 5px 5px;
+}
+
+#categories_on_home .category_head {
+    border-bottom: 1px solid;
+    max-width: 26rem;
+    font-weight: 600;
+    margin-left: 1rem;
+    padding: 7px;
+    font-size: 1.7rem;
+    border-radius: 4px;
+}
+
+#categories_on_home .card .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160, 160, 160, 0.2);
+    padding: 10px 10px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    min-height: 6rem;
+}
+
+#categories_on_home .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+    margin-right: 20px;
+    -webkit-transition: color .3s ease;
+    transition: color .3s ease;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: inherit;
+}
+
+#categories_on_home .card .card-action small {
+    font-weight: 400;
+    font-size: 1rem;
+}

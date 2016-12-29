@@ -1,6 +1,6 @@
 from django.conf.urls import include, url
-from afrikalmarket import views
+from afrikalmarket import views as afrikalmarket_views
 
 urlpatterns = [
-    url(r'^', views.index, name='index'),
+    url(r'^', afrikalmarket_views.index, name='index'),
 ]

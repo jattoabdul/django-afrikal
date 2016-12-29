@@ -170,9 +170,13 @@ LOGOUT_URL = '/accounts/signout/'
 USERENA_ACTIVATION_REQUIRED = False
 USERENA_DISABLE_PROFILE_LIST = True
 
+# Userena Settings
+USERENA_MUGSHOT_PATH = 'mugshots/%(username)s/'
+USERENA_HIDE_EMAIL = True
+USERENA_HTML_EMAIL = True
+
 # Userena Custom Profile reference
 AUTH_PROFILE_MODULE = 'accounts.MyProfile'
-
 
 # email backend
 # EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
@@ -185,4 +189,6 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'jattoade@gmail.com'
 EMAIL_HOST_PASSWORD = 'jasabs93'
+
+# Afrikalmarket settings
 

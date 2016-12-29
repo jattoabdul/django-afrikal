@@ -17,10 +17,11 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from afrikalmarket import views
+from afrikalmarket import views as afrikalmarket_views
+
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', afrikalmarket_views.index, name='index'),
     url(r'^market/', include('afrikalmarket.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^weblog/', include('zinnia.urls')),
